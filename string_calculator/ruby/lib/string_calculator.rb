@@ -15,7 +15,7 @@ class StringCalculator
     end
 
     def scan_delimiter!
-      if delimiter = scan_delimiter
+      if delimiter = @params[/\[(.*?)\]/, 1]
         @delimiters << delimiter
         @params.sub!("//[#{delimiter}]", "")
       end
@@ -26,10 +26,6 @@ class StringCalculator
     end
 
     private
-
-    def scan_delimiter
-      @params[/\[(.*?)\]/, 1]
-    end
 
     def delimited
       @params.split(/[#{@delimiters}]/)
