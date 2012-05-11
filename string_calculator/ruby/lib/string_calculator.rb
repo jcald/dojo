@@ -3,7 +3,7 @@ class StringCalculator
     params = StringParams.new(str)
     params.scan_delimiter!
 
-    params.split_and_sum
+    params.sum_delimited
   end
 
   private
@@ -21,7 +21,7 @@ class StringCalculator
       end
     end
     
-    def split_and_sum
+    def sum_delimited
       delimited.map(&:to_i).inject(&:+)
     end
 
