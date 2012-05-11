@@ -22,7 +22,7 @@ class StringCalculator
     end
     
     def sum_delimited
-      delimited.map(&:to_i).inject(&:+)
+      delimited.map(&:to_i).reduce(&:+)
     end
 
     private
