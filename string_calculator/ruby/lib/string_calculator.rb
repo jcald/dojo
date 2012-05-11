@@ -14,15 +14,15 @@ class StringCalculator
       @delimiters = ",\n"
     end
 
-    def split_and_sum
-      to_int(@params).inject { |sum, num| sum + num }
-    end
-
     def scan_delimiter!
       if delimiter = scan_delimiter
         @delimiters << delimiter
         @params.sub!("//[#{delimiter}]", "")
       end
+    end
+    
+    def split_and_sum
+      to_int(@params).inject { |sum, num| sum + num }
     end
 
     private
