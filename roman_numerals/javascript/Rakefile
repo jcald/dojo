@@ -1,0 +1,7 @@
+task :test do
+  cmd = "phantomjs test/qunit/run-qunit.js"
+  cmd << " \"file://localhost#{File.dirname(__FILE__)}/test/index.html\""
+  system(cmd)
+end
+
+task default: :test
