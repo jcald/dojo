@@ -22,7 +22,7 @@ class StringCalculator
     end
     
     def split_and_sum
-      delimited.map(&:to_i).inject { |sum, num| sum + num }
+      delimited.map(&:to_i).inject(&:+)
     end
 
     private
