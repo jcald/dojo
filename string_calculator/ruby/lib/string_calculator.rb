@@ -22,7 +22,7 @@ class StringCalculator
     end
     
     def split_and_sum
-      to_int(@params).inject { |sum, num| sum + num }
+      delimited.map(&:to_i).inject { |sum, num| sum + num }
     end
 
     private
@@ -31,8 +31,8 @@ class StringCalculator
       @params.scan(/\[(.*?)\]/).flatten.first
     end
 
-    def to_int(ary)
-      ary.split(/[#{@delimiters}]/).map(&:to_i)
+    def delimited
+      @params.split(/[#{@delimiters}]/)
     end
   end
 end
