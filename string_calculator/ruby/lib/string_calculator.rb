@@ -1,5 +1,4 @@
 class StringCalculator
-
   def self.add(str)
     params = StringParams.new(str)
     params.scan_delimiter!
@@ -36,5 +35,4 @@ class StringCalculator
       ary.split(/[#{@delimiters}]/).map(&:to_i)
     end
   end
-
 end
