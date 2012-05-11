@@ -9,9 +9,9 @@ class StringCalculator
   private
 
   class StringParams
-    def initialize(params, delimiters = nil)
+    def initialize(params, delimiters = ",\n")
       @params     = params
-      @delimiters = delimiters || ",\n"
+      @delimiters = delimiters
     end
 
     def split_and_sum
