@@ -28,7 +28,7 @@ class StringCalculator
     private
 
     def scan_delimiter
-      @params.scan(/\[(.*?)\]/).flatten.first
+      @params[/\[(.*?)\]/, 1]
     end
 
     def delimited
