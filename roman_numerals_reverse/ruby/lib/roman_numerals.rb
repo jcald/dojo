@@ -1,4 +1,4 @@
-class RomanNumerals
+class RomanNumeral
   ROMANS = {
     'M'  => 1000,
     'CM' => 900,
