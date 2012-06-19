@@ -19,7 +19,7 @@ class RomanNumerals
     numeral = 0
 
     ROMANS.each do |key, value|
-      while roman.start_with?(key)
+      while roman.start_with? key
         roman.sub! key, ''
         numeral += value
       end
