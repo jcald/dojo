@@ -35,5 +35,4 @@ module RomanNumerals
   def has_roman?(numeral)
     (1..3999).include? numeral
   end
-
 end
