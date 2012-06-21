@@ -16,15 +16,15 @@ class RomanNumeral
   }
 
   def self.to_arabic roman
-    numeral = 0
+    arabic = 0
 
     ROMANS.each do |key, value|
       while roman.start_with? key
         roman.sub! key, ''
-        numeral += value
+        arabic += value
       end
     end
 
-    numeral
+    arabic
   end
 end
