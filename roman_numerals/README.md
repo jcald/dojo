@@ -28,4 +28,9 @@
     <td>Elixir</td>
     <td></td>
   </tr>
+
+  <tr>
+    <td>CoffeeScript</td>
+    <td>Jasmine</td>
+  </tr>
 </table>
